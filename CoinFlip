@@ -1,0 +1,15 @@
+import random
+
+coin_heads, coin_tails, coin_side = 0, 0, 0
+
+times_flipped = 0
+while times_flipped < 100000000:
+    coin_flips = random.randrange(1,101)
+    if coin_flips <48:
+         coin_heads += 1
+    elif coin_flips > 47 and coin_flips < 96:
+         coin_tails += 1
+    elif coin_flips >95:
+        coin_side += 1
+    times_flipped += 1
+print ("Out of 100 million flips, Heads: " +str(coin_heads) + " Tails: " +str (coin_tails) + " Side: " +str(coin_side))
